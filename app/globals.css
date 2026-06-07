@@ -10,19 +10,19 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.145 0 0);
-  --primary-foreground: oklch(0.92 0.2 128);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.145 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.4 0 0);
-  --accent: oklch(0.92 0.2 128);
-  --accent-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.68 0.12 196);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.38 0.17 264);
+  --secondary-foreground: oklch(1 0 0);
+  --muted: oklch(0.94 0.03 215);
+  --muted-foreground: oklch(0.43 0.08 240);
+  --accent: oklch(0.68 0.12 196);
+  --accent-foreground: oklch(1 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.9 0 0);
-  --input: oklch(0.9 0 0);
-  --ring: oklch(0.92 0.2 128);
+  --border: oklch(0.88 0.03 215);
+  --input: oklch(0.88 0.03 215);
+  --ring: oklch(0.68 0.12 196);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -38,11 +38,18 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 
-  /* Custom GiGi colors */
-  --lime: oklch(0.92 0.2 128);
-  --charcoal: oklch(0.145 0 0);
-  --pineapple: oklch(0.9 0.15 90);
-  --coconut: oklch(0.95 0.03 90);
+  /* Custom Evara colors */
+  --lime: oklch(0.68 0.12 196);
+  --teal: oklch(0.68 0.12 196);
+  --indigo: oklch(0.38 0.17 264);
+  --sky: oklch(0.70 0.10 220);
+  --sky-light: oklch(0.83 0.07 215);
+  --sky-pale: oklch(0.94 0.03 215);
+  --charcoal: oklch(0.15 0.04 240);
+  --charcoal-light: oklch(0.28 0.06 240);
+  --charcoal-dark: oklch(0.09 0.02 240);
+  --pineapple: oklch(0.56 0.10 230);
+  --coconut: oklch(0.94 0.03 215);
 }
 
 .dark {
@@ -120,9 +127,16 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  /* Custom GiGi theme colors */
+  /* Custom Evara theme colors */
   --color-lime: var(--lime);
+  --color-teal: var(--teal);
+  --color-indigo: var(--indigo);
+  --color-sky: var(--sky);
+  --color-sky-light: var(--sky-light);
+  --color-sky-pale: var(--sky-pale);
   --color-charcoal: var(--charcoal);
+  --color-charcoal-light: var(--charcoal-light);
+  --color-charcoal-dark: var(--charcoal-dark);
   --color-pineapple: var(--pineapple);
   --color-coconut: var(--coconut);
 }
@@ -150,10 +164,10 @@
 @keyframes pulse-glow {
   0%,
   100% {
-    box-shadow: 0 0 20px rgba(175, 255, 0, 0.3);
+    box-shadow: 0 0 20px rgba(40, 172, 183, 0.3);
   }
   50% {
-    box-shadow: 0 0 40px rgba(175, 255, 0, 0.6);
+    box-shadow: 0 0 40px rgba(40, 172, 183, 0.6);
   }
 }
 

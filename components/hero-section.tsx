@@ -63,10 +63,10 @@ export function HeroSection() {
       className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-white noise-overlay"
     >
       {/* Subtle gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white via-[#AFFF00]/5 to-white" />
+      <div className="absolute inset-0 bg-gradient-to-br from-white via-primary/5 to-white" />
 
       <motion.div
-        className="absolute top-20 left-10 w-24 h-24 rounded-full bg-[#AFFF00]/20 blur-3xl"
+        className="absolute top-20 left-10 w-24 h-24 rounded-full bg-primary/20 blur-3xl"
         animate={{
           x: [0, 30, 0],
           y: [0, -20, 0],
@@ -75,7 +75,7 @@ export function HeroSection() {
         transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute bottom-40 right-20 w-32 h-32 rounded-full bg-[#AFFF00]/10 blur-3xl"
+        className="absolute bottom-40 right-20 w-32 h-32 rounded-full bg-primary/10 blur-3xl"
         animate={{
           x: [0, -40, 0],
           y: [0, 30, 0],
@@ -93,10 +93,10 @@ export function HeroSection() {
               initial="hidden"
               animate="visible"
               custom={0}
-              className="inline-flex items-center gap-2 bg-[#121212] text-white px-3 py-1.5 rounded-full text-xs font-mono tracking-wider uppercase"
+              className="inline-flex items-center gap-2 bg-charcoal text-white px-3 py-1.5 rounded-full text-xs font-mono tracking-wider uppercase"
             >
               <motion.span
-                className="w-2 h-2 bg-[#AFFF00] rounded-full"
+                className="w-2 h-2 bg-primary rounded-full"
                 animate={{ scale: [1, 1.2, 1], opacity: [1, 0.7, 1] }}
                 transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
               />
@@ -106,7 +106,7 @@ export function HeroSection() {
             <div className="space-y-1 overflow-hidden">
               <motion.h1
                 style={{ x: textX1 }}
-                className="text-5xl md:text-7xl font-black tracking-tighter text-[#121212] leading-[0.9]"
+                className="text-5xl md:text-7xl font-black tracking-tighter text-foreground leading-[0.9]"
               >
                 <motion.span
                   variants={fadeUpVariants}
@@ -120,14 +120,14 @@ export function HeroSection() {
               </motion.h1>
               <motion.h1
                 style={{ x: textX2 }}
-                className="text-5xl md:text-7xl font-black tracking-tighter text-[#121212] leading-[0.9]"
+                className="text-5xl md:text-7xl font-black tracking-tighter text-foreground leading-[0.9]"
               >
                 <motion.span
                   variants={fadeUpVariants}
                   initial="hidden"
                   animate="visible"
                   custom={2}
-                  className="inline-block text-[#AFFF00] tracking-wide uppercase"
+                  className="inline-block text-primary tracking-wide uppercase"
                 >
                   Purest Form
                 </motion.span>
@@ -137,7 +137,7 @@ export function HeroSection() {
                 initial="hidden"
                 animate="visible"
                 custom={3}
-                className="text-lg md:text-xl font-mono text-[#121212]/60 tracking-tight pt-2 max-w-md"
+                className="text-lg md:text-xl font-mono text-foreground/60 tracking-tight pt-2 max-w-md"
               >
                 Drink 𖠚 better with Premium
                 glass bottled water 💧
@@ -155,7 +155,7 @@ export function HeroSection() {
                 href="https://api.whatsapp.com/send?phone=919216051173&text=Can%20I%20Drink%20Evara%20%3F"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#AFFF00] text-[#121212] px-6 py-3 rounded-full font-bold text-sm tracking-wide flex items-center gap-2 group relative overflow-hidden"
+                className="bg-primary text-primary-foreground px-6 py-3 rounded-full font-bold text-sm tracking-wide flex items-center gap-2 group relative overflow-hidden"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
@@ -182,8 +182,8 @@ export function HeroSection() {
                 href="https://api.whatsapp.com/send?phone=919216051173&text=Can%20I%20get%20Free%20sample%20%3F"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border-2 border-[#121212] text-[#121212] px-6 py-3 rounded-full font-bold text-sm tracking-wide relative overflow-hidden"
-                whileHover={{ scale: 1.02, backgroundColor: "#121212", color: "#fff" }}
+                className="border-2 border-charcoal text-charcoal px-6 py-3 rounded-full font-bold text-sm tracking-wide relative overflow-hidden"
+                whileHover={{ scale: 1.02, backgroundColor: "var(--charcoal)", color: "#fff" }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
@@ -201,12 +201,12 @@ export function HeroSection() {
               {["Zero Sugar", "75mg Caffeine", "Natural Flavours", "Vitamin B Rich"].map((benefit, i) => (
                 <motion.div
                   key={benefit}
-                  className="flex items-center gap-2 text-xs font-mono text-[#121212]/60"
+                  className="flex items-center gap-2 text-xs font-mono text-charcoal/60"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.8 + i * 0.1 }}
                 >
-                  <div className="w-1.5 h-1.5 bg-[#AFFF00] rounded-full" />
+                  <div className="w-1.5 h-1.5 bg-primary rounded-full" />
                   {benefit}
                 </motion.div>
               ))}
@@ -216,7 +216,7 @@ export function HeroSection() {
           <motion.div style={{ y, scale }} className="relative flex justify-center">
             <motion.div variants={scaleInVariants} initial="hidden" animate="visible" className="relative">
               <motion.div
-                className="absolute inset-0 bg-[#84cc16]/30 blur-[80px] rounded-full scale-75"
+                className="absolute inset-0 bg-primary/30 blur-[80px] rounded-full scale-75"
                 animate={{
                   scale: [0.75, 0.85, 0.75],
                   opacity: [0.3, 0.5, 0.3],
@@ -236,11 +236,11 @@ export function HeroSection() {
                 }}
               >
                 <Image
-                  src="/images/drink2.png"
+                  src="/images/drink2.webp"
                   alt="GiGi Energy Drink - Lemon Lime Flavour"
                   width={350}
-                  height={525}
-                  className="relative z-10 drop-shadow-2xl"
+                  height={440}
+                  className="relative z-10 drop-shadow-2xl object-contain"
                   priority
                 />
               </motion.div>
@@ -258,9 +258,9 @@ export function HeroSection() {
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
           >
-            <div className="w-5 h-8 border-2 border-[#121212]/30 rounded-full flex justify-center pt-1.5">
+            <div className="w-5 h-8 border-2 border-charcoal/30 rounded-full flex justify-center pt-1.5">
               <motion.div
-                className="w-1 h-2 bg-[#121212]/30 rounded-full"
+                className="w-1 h-2 bg-charcoal/30 rounded-full"
                 animate={{ y: [0, 6, 0], opacity: [1, 0.5, 1] }}
                 transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
               />

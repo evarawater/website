@@ -12,28 +12,28 @@ const features = [
     title: "75mg",
     subtitle: "Natural Caffeine",
     description: "Clean energy without the crash",
-    accent: "#AFFF00",
+    accent: "#28acb7",
   },
   {
     icon: Flame,
     title: "Zero",
     subtitle: "Sugar Added",
     description: "All the taste, none of the guilt",
-    accent: "#FF6B35",
+    accent: "#2b2e80",
   },
   {
     icon: Brain,
     title: "100%",
     subtitle: "Mental Clarity",
     description: "Enhanced focus & concentration",
-    accent: "#00D4FF",
+    accent: "#3CA9E7",
   },
   {
     icon: Sparkles,
     title: "B12",
     subtitle: "Vitamin Complex",
     description: "Essential nutrients for energy",
-    accent: "#AFFF00",
+    accent: "#1F6187",
   },
 ]
 
@@ -90,7 +90,7 @@ function FeatureCard({ feature, index }: { feature: (typeof features)[0]; index:
       />
 
       {/* Card */}
-      <div className="relative bg-[#1a1a1a] rounded-2xl p-5 border border-white/10 overflow-hidden h-full">
+      <div className="relative bg-charcoal-light rounded-2xl p-5 border border-white/10 overflow-hidden h-full">
         {/* Shine effect on hover */}
         <motion.div
           className="absolute inset-0 opacity-0 group-hover:opacity-100"
@@ -162,8 +162,8 @@ export function BentoGrid() {
   const isInView = useInView(ref, { once: true, margin: "-50px" })
 
   return (
-    <section id="formula" className="relative py-16 bg-[#121212] overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#121212] via-[#0a0a0a] to-[#121212]" />
+    <section id="formula" className="relative py-16 bg-charcoal overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-charcoal via-charcoal-dark to-charcoal" />
 
       <div ref={ref} className="max-w-5xl mx-auto px-6 relative z-10">
         <motion.div
@@ -173,7 +173,7 @@ export function BentoGrid() {
           className="text-center mb-10"
         >
           <motion.span
-            className="inline-block font-mono text-[#AFFF00] text-[10px] tracking-[0.3em] uppercase"
+            className="inline-block font-mono text-primary text-[10px] tracking-[0.3em] uppercase"
             initial={{ opacity: 0, y: 10 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
             transition={{ delay: 0.1 }}
@@ -194,7 +194,7 @@ export function BentoGrid() {
 
           {/* Animated underline */}
           <motion.div
-            className="h-[2px] w-12 bg-[#AFFF00] mx-auto mt-3 rounded-full"
+            className="h-[2px] w-12 bg-primary mx-auto mt-3 rounded-full"
             initial={{ scaleX: 0 }}
             animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
             transition={{ duration: 0.6, delay: 0.4, ease: [0.25, 0.4, 0.25, 1] }}

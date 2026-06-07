@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#AFFF00",
+  themeColor: "#28acb7",
 }
 
 export default function RootLayout({
@@ -36,7 +36,7 @@ export default function RootLayout({
     <html lang="en" className={`${_inter.variable} ${_jetbrainsMono.variable}`}>
       <body className={`${_inter.className} font-sans antialiased`}>
         <ClickSpark
-          sparkColor="#AFFF00"
+          sparkColor="#28acb7"
           sparkSize={12}
           sparkRadius={20}
           sparkCount={8}

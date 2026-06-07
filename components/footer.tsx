@@ -60,7 +60,7 @@ export function Footer() {
   ]
 
   return (
-    <footer ref={footerRef} id="careers" className="relative bg-[#121212] pt-16 pb-6 overflow-hidden">
+    <footer ref={footerRef} id="careers" className="relative bg-charcoal pt-16 pb-6 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 60 }}
@@ -80,7 +80,7 @@ export function Footer() {
               READY TO
             </motion.span>
             <motion.span
-              className="block text-[#AFFF00]"
+              className="block text-primary"
               initial={{ y: 100 }}
               whileInView={{ y: 0 }}
               viewport={{ once: true }}
@@ -105,16 +105,16 @@ export function Footer() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="your@email.com"
-                className="w-full bg-white/5 border-2 border-white/20 rounded-xl px-4 py-3 text-white placeholder:text-white/40 font-mono text-sm focus:outline-none focus:border-[#AFFF00] transition-all duration-300"
-                whileFocus={{ borderColor: "#AFFF00" }}
+                className="w-full bg-white/5 border-2 border-white/20 rounded-xl px-4 py-3 text-white placeholder:text-white/40 font-mono text-sm focus:outline-none focus:border-primary transition-all duration-300"
+                whileFocus={{ borderColor: "var(--primary)" }}
               />
               <motion.div
                 className="absolute inset-0 rounded-xl pointer-events-none"
-                animate={email.length > 0 ? { boxShadow: "0 0 20px rgba(175,255,0,0.2)" } : { boxShadow: "none" }}
+                animate={email.length > 0 ? { boxShadow: "0 0 20px rgba(40,172,183,0.2)" } : { boxShadow: "none" }}
               />
             </motion.div>
             <motion.button
-              className="bg-[#AFFF00] text-[#121212] px-6 py-3 rounded-xl font-bold text-sm tracking-wide whitespace-nowrap relative overflow-hidden"
+              className="bg-primary text-primary-foreground px-6 py-3 rounded-xl font-bold text-sm tracking-wide whitespace-nowrap relative overflow-hidden"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
@@ -174,7 +174,7 @@ export function Footer() {
                     <motion.div whileHover={{ x: 4 }} transition={{ type: "spring", stiffness: 400, damping: 17 }}>
                       <Link
                         href="#"
-                        className="text-white/60 hover:text-[#AFFF00] font-mono text-xs transition-colors inline-block"
+                        className="text-white/60 hover:text-primary font-mono text-xs transition-colors inline-block"
                       >
                         {item}
                       </Link>
@@ -200,7 +200,7 @@ export function Footer() {
           >
             <span className="text-xl font-black">
               <span className="text-white">Gi</span>
-              <span className="text-[#AFFF00]">Gi</span>
+              <span className="text-primary">Gi</span>
             </span>
           </motion.div>
 
@@ -215,7 +215,7 @@ export function Footer() {
                 ? {
                     rotate: [0, -5, 5, -5, 5, 0],
                     scale: [1, 1.1, 1],
-                    color: "#AFFF00",
+                    color: "var(--primary)",
                   }
                 : {
                     rotate: 0,

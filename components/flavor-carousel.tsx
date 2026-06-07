@@ -14,8 +14,8 @@ const flavors = [
     tagline: "Switch to glass today",
     description: "Clean and fresh drinking water in a premium glass bottle. No plastic. No smell. Just pure taste.",
     image: "/images/drink2.png",
-    bgColor: "from-[#84cc16]/20 via-[#84cc16]/10 to-transparent",
-    accentColor: "#84cc16",
+    bgColor: "from-sky-400/20 via-sky-400/10 to-transparent",
+    accentColor: "#3CA9E7",
     badges: ["Safe glass bottle", "Clean taste", "Daily use"],
   },
   {
@@ -24,8 +24,8 @@ const flavors = [
     tagline: "Feel calm daily",
     description: "Natural Tulsi infused water for daily calm and freshness. Simple, light and refreshing.",
     image: "/images/drink1.png",
-    bgColor: "from-[#f59e0b]/20 via-[#f59e0b]/10 to-transparent",
-    accentColor: "#f59e0b",
+    bgColor: "from-indigo-700/20 via-indigo-700/10 to-transparent",
+    accentColor: "#2b2e80",
     badges: ["Natural Tulsi", "Light & calming", "Daily wellness"],
   },
   {
@@ -34,8 +34,8 @@ const flavors = [
     tagline: "Feel light daily",
     description: "Light ginger infused water for everyday comfort. Simple and natural choice.",
     image: "/mystery-energy-drink-can-silhouette.jpg",
-    bgColor: "from-[#AFFF00]/20 via-[#AFFF00]/5 to-transparent",
-    accentColor: "#AFFF00",
+    bgColor: "from-primary/20 via-primary/5 to-transparent",
+    accentColor: "#28acb7",
     mystery: true,
   },
   {
@@ -44,8 +44,8 @@ const flavors = [
     tagline: "Stay fresh always",
     description: "Cool and refreshing mint water. Perfect for hot days and daily freshness.",
     image: "/mystery-energy-drink-can-silhouette.jpg",
-    bgColor: "from-[#AFFF00]/20 via-[#AFFF00]/5 to-transparent",
-    accentColor: "#AFFF00",
+    bgColor: "from-primary/20 via-primary/5 to-transparent",
+    accentColor: "#28acb7",
     mystery: true,
   },
 ]
@@ -132,7 +132,7 @@ export function FlavorCarousel() {
           className="text-center mb-10"
         >
           <motion.span
-            className="font-mono text-[#121212]/60 text-xs tracking-widest"
+            className="font-mono text-charcoal/60 text-xs tracking-widest"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -140,7 +140,7 @@ export function FlavorCarousel() {
           >
             OUR FLAVOURS
           </motion.span>
-          <h2 className="text-3xl md:text-5xl font-black text-[#121212] tracking-tighter mt-2 overflow-hidden">
+          <h2 className="text-3xl md:text-5xl font-black text-charcoal tracking-tighter mt-2 overflow-hidden">
             <motion.span
               className="inline-block"
               initial={{ y: 80 }}
@@ -168,7 +168,7 @@ export function FlavorCarousel() {
           <div className="flex items-center justify-center gap-6">
             <motion.button
               onClick={prevFlavor}
-              className="hidden md:flex w-12 h-12 rounded-full border-2 border-[#121212] items-center justify-center hover:bg-[#121212] hover:text-white transition-colors"
+              className="hidden md:flex w-12 h-12 rounded-full border-2 border-charcoal items-center justify-center hover:bg-charcoal hover:text-white transition-colors"
               whileHover={{ scale: 1.1, rotate: -5 }}
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
@@ -188,7 +188,7 @@ export function FlavorCarousel() {
                 style={{ perspective: 1000 }}
               >
                 <motion.div
-                  className={`bg-white rounded-3xl p-6 md:p-8 border-2 border-[#121212]/10 shadow-xl ${currentFlavor.mystery ? "relative overflow-hidden" : ""}`}
+                  className={`bg-white rounded-3xl p-6 md:p-8 border-2 border-charcoal/10 shadow-xl ${currentFlavor.mystery ? "relative overflow-hidden" : ""}`}
                   style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
                   onMouseMove={handleMouseMove}
                   onMouseLeave={handleMouseLeave}
@@ -219,7 +219,7 @@ export function FlavorCarousel() {
                           animate={{ scale: [1, 1.1, 1], opacity: [0.2, 0.4, 0.2] }}
                           transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
                         >
-                          <span className="text-7xl font-black text-[#121212]/20">?</span>
+                          <span className="text-7xl font-black text-charcoal/20">?</span>
                         </motion.div>
                       )}
                     </motion.div>
@@ -236,7 +236,7 @@ export function FlavorCarousel() {
                           {currentFlavor.tagline}
                         </motion.span>
                         <motion.h3
-                          className="text-3xl md:text-4xl font-black text-[#121212] tracking-tighter mt-1"
+                          className="text-3xl md:text-4xl font-black text-charcoal tracking-tighter mt-1"
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.3, type: "spring", stiffness: 100 }}
@@ -246,7 +246,7 @@ export function FlavorCarousel() {
                       </div>
 
                       <motion.p
-                        className="text-sm text-[#121212]/60 font-mono"
+                        className="text-sm text-charcoal/60 font-mono"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.4 }}
@@ -264,7 +264,7 @@ export function FlavorCarousel() {
                           {currentFlavor.badges.map((badge) => (
                             <span
                               key={badge}
-                              className="px-2 py-1 bg-[#121212]/5 rounded-full text-xs font-mono text-[#121212]/60"
+                              className="px-2 py-1 bg-charcoal/5 rounded-full text-xs font-mono text-charcoal/60"
                             >
                               {badge}
                             </span>
@@ -303,11 +303,11 @@ export function FlavorCarousel() {
                           transition={{ delay: 0.5 }}
                         >
                           <motion.div
-                            className="w-2 h-2 bg-[#AFFF00] rounded-full"
+                            className="w-2 h-2 bg-primary rounded-full"
                             animate={{ scale: [1, 1.3, 1], opacity: [1, 0.5, 1] }}
                             transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
                           />
-                          <span className="font-mono text-xs text-[#121212]/60">Dropping soon...</span>
+                          <span className="font-mono text-xs text-charcoal/60">Dropping soon...</span>
                         </motion.div>
                       )}
                     </div>
@@ -318,7 +318,7 @@ export function FlavorCarousel() {
 
             <motion.button
               onClick={nextFlavor}
-              className="hidden md:flex w-12 h-12 rounded-full border-2 border-[#121212] items-center justify-center hover:bg-[#121212] hover:text-white transition-colors"
+              className="hidden md:flex w-12 h-12 rounded-full border-2 border-charcoal items-center justify-center hover:bg-charcoal hover:text-white transition-colors"
               whileHover={{ scale: 1.1, rotate: 5 }}
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
@@ -330,14 +330,14 @@ export function FlavorCarousel() {
           <div className="flex md:hidden justify-center gap-4 mt-6">
             <motion.button
               onClick={prevFlavor}
-              className="w-10 h-10 rounded-full border-2 border-[#121212] flex items-center justify-center"
+              className="w-10 h-10 rounded-full border-2 border-charcoal flex items-center justify-center"
               whileTap={{ scale: 0.9 }}
             >
               <ChevronLeft className="w-4 h-4" />
             </motion.button>
             <motion.button
               onClick={nextFlavor}
-              className="w-10 h-10 rounded-full border-2 border-[#121212] flex items-center justify-center"
+              className="w-10 h-10 rounded-full border-2 border-charcoal flex items-center justify-center"
               whileTap={{ scale: 0.9 }}
             >
               <ChevronRight className="w-4 h-4" />
