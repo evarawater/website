@@ -42,54 +42,51 @@ export function Footer() {
 
   const footerLinks = [
     {
-      title: "Products",
-      links: ["Lemon Lime", "Pineapple Coconut", "Mystery", "Bundles"],
-    },
-    {
       title: "Quick Links",
-      links: ["Home", "Flavours", "Creators", "Distributors"],
+      links: [
+        { name: "Home", href: "#" },
+        { name: "Drink Evara", href: "#" },
+        { name: "Order", href: "#" },
+        { name: "What’s Inside", href: "#" },
+        { name: "Made for", href: "#" },
+        { name: "Contact Us", href: "#" },
+      ],
     },
     {
-      title: "Company",
-      links: ["About", "Careers", "Press", "Contact"],
+      title: "Products",
+      links: [
+        { name: "Glass Water", href: "#" },
+        { name: "Tulsi Water", href: "#" },
+        { name: "Ginger Water", href: "#" },
+        { name: "Mint Water", href: "#" },
+      ],
     },
     {
       title: "Legal",
-      links: ["Privacy Policy", "Terms of Service", "Cookie Policy"],
+      links: [
+        { name: "Privacy Policy", href: "#" },
+        { name: "Terms & Conditions", href: "#" },
+        { name: "Refund-Return Policy", href: "#" },
+        { name: "Cookie Policy", href: "#" },
+      ],
     },
   ]
 
   return (
     <footer ref={footerRef} id="careers" className="relative bg-charcoal pt-16 pb-6 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter leading-[0.9] overflow-hidden">
-            <motion.span
-              className="block"
-              initial={{ y: 100 }}
-              whileInView={{ y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] }}
-            >
-              READY TO
-            </motion.span>
-            <motion.span
-              className="block text-primary"
-              initial={{ y: 100 }}
-              whileInView={{ y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1], delay: 0.1 }}
-            >
-              LEVEL UP?
-            </motion.span>
-          </h2>
-        </motion.div>
+        <div className="text-center mb-12 overflow-hidden">
+          <motion.h2
+            className="text-4xl md:text-6xl font-black text-white tracking-tighter leading-[0.9]"
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] }}
+          >
+            Connect{" "}
+            <span className="text-primary">With Us</span>
+          </motion.h2>
+        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -131,7 +128,7 @@ export function Footer() {
                 animate={isSubmitting ? { opacity: [1, 0.5, 1] } : {}}
                 transition={{ duration: 0.5, repeat: isSubmitting ? Number.POSITIVE_INFINITY : 0 }}
               >
-                {isSubmitting ? "Joining..." : "Get 25% Off"}
+                {isSubmitting ? "Sending..." : "Join Us"}
               </motion.span>
             </motion.button>
           </div>
@@ -142,7 +139,7 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
           >
-            Join 50k+ dreamers. No spam, just energy.
+            For orders and bulk inquiries
           </motion.p>
         </motion.div>
 
@@ -154,8 +151,7 @@ export function Footer() {
           transition={{ delay: 0.3 }}
         >
           <p className="text-white/60 font-mono text-xs max-w-xl mx-auto leading-relaxed">
-            GiGi Energy is a better-for-you energy drink crafted with natural flavors, zero sugar, and a clean energy
-            formula. Fuel your ambition without the crash.
+            Evara – Premium Glass Bottled Water in Udaipur
           </p>
         </motion.div>
 
@@ -170,13 +166,13 @@ export function Footer() {
               <h4 className="font-bold text-white text-sm mb-3">{section.title}</h4>
               <ul className="space-y-2">
                 {section.links.map((item) => (
-                  <li key={item}>
+                  <li key={item.name}>
                     <motion.div whileHover={{ x: 4 }} transition={{ type: "spring", stiffness: 400, damping: 17 }}>
                       <Link
-                        href="#"
+                        href={item.href}
                         className="text-white/60 hover:text-primary font-mono text-xs transition-colors inline-block"
                       >
-                        {item}
+                        {item.name}
                       </Link>
                     </motion.div>
                   </li>

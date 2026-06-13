@@ -4,36 +4,43 @@ import type React from "react"
 
 import { motion, useInView, useMotionValue, useSpring, useTransform } from "framer-motion"
 import { useRef, useState } from "react"
-import { Zap, Flame, Brain, Sparkles } from "lucide-react"
+import { Droplets, Gem, ShieldCheck, Zap, Sparkles } from "lucide-react"
 
 const features = [
   {
-    icon: Zap,
-    title: "75mg",
-    subtitle: "Natural Caffeine",
-    description: "Clean energy without the crash",
+    icon: Droplets,
+    title: "pH 8+",
+    subtitle: "Alkaline Balance",
+    description: "Helps maintain optimal body pH levels",
     accent: "#28acb7",
   },
   {
-    icon: Flame,
-    title: "Zero",
-    subtitle: "Sugar Added",
-    description: "All the taste, none of the guilt",
+    icon: Gem,
+    title: "3 Rich",
+    subtitle: "Essential Minerals",
+    description: "Calcium, Magnesium & Potassium support daily wellness",
     accent: "#2b2e80",
   },
   {
-    icon: Brain,
-    title: "100%",
-    subtitle: "Mental Clarity",
-    description: "Enhanced focus & concentration",
+    icon: ShieldCheck,
+    title: "0 Zero",
+    subtitle: "Impurities",
+    description: "Advanced filtration for pure, clean drinking water",
     accent: "#3CA9E7",
   },
   {
-    icon: Sparkles,
-    title: "B12",
-    subtitle: "Vitamin Complex",
-    description: "Essential nutrients for energy",
+    icon: Zap,
+    title: "100%",
+    subtitle: "Hydration Boost",
+    description: "Faster hydration for an active lifestyle",
     accent: "#1F6187",
+  },
+  {
+    icon: Sparkles,
+    title: "Electrolytes",
+    subtitle: "Natural Balance",
+    description: "Supports energy and overall body function",
+    accent: "#0e9e78",
   },
 ]
 
@@ -165,7 +172,7 @@ export function BentoGrid() {
     <section id="formula" className="relative py-16 bg-charcoal overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-charcoal via-charcoal-dark to-charcoal" />
 
-      <div ref={ref} className="max-w-5xl mx-auto px-6 relative z-10">
+      <div ref={ref} className="max-w-7xl mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
@@ -201,7 +208,7 @@ export function BentoGrid() {
           />
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
           {features.map((feature, index) => (
             <FeatureCard key={feature.title} feature={feature} index={index} />
           ))}

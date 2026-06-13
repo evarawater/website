@@ -2,32 +2,36 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
-import { Sparkles, Dumbbell, Building2, Calendar } from "lucide-react"
+import { Users, UtensilsCrossed, PartyPopper, Building2 } from "lucide-react"
 
 const activations = [
   {
-    icon: Sparkles,
-    title: "Free Tasting Events",
-    description: "Experience GiGi at exclusive tasting events near you.",
-    cta: "Find Events",
+    icon: Users,
+    title: "Everyone",
+    description: "Clean, safe water for better everyday living.",
+    cta: "Let's Taste it",
+    link: "https://api.whatsapp.com/send?phone=919216051173&text=I%20want%20it%20for%20my%20hotels%2C%20wedding%2C%20events%20%3F"
   },
   {
-    icon: Dumbbell,
-    title: "Gyms & Studios",
-    description: "Partner with us to fuel your fitness community.",
-    cta: "Partner With Us",
+    icon: UtensilsCrossed,
+    title: "Hotels & Cafes",
+    description: "Premium water that elevates every guest stay.",
+    cta: "Bulk Order",
+    link: "https://api.whatsapp.com/send?phone=919216051173&text=I%20want%20it%20for%20my%20hotels%2C%20wedding%2C%20events%20%3F"
+  },
+  {
+    icon: PartyPopper,
+    title: "Events & Weddings",
+    description: "Elegant water for unforgettable celebrations.",
+    cta: "Sponsor Event",
+    link: "https://api.whatsapp.com/send?phone=919216051173&text=I%20want%20it%20for%20my%20hotels%2C%20wedding%2C%20events%20%3F"
   },
   {
     icon: Building2,
     title: "Corporate Offices",
-    description: "Power up your workplace. Bulk orders available.",
+    description: "Clean, premium water for modern workspaces.",
     cta: "Get Quote",
-  },
-  {
-    icon: Calendar,
-    title: "Event Organizers",
-    description: "Sponsor your next event with GiGi energy.",
-    cta: "Sponsor Event",
+    link: "https://api.whatsapp.com/send?phone=919216051173&text=I%20want%20it%20for%20my%20hotels%2C%20wedding%2C%20events%20%3F"
   },
 ]
 
@@ -79,25 +83,29 @@ export function ActivationsSection() {
           >
             ACTIVATIONS
           </motion.span>
-          <h2 className="text-3xl md:text-5xl font-black text-charcoal tracking-tighter mt-2 overflow-hidden">
-            <motion.span
-              className="inline-block"
-              initial={{ y: 100 }}
-              whileInView={{ y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1], delay: 0.2 }}
-            >
-              EXPERIENCE{" "}
-            </motion.span>
-            <motion.span
-              className="text-primary inline-block"
-              initial={{ y: 100 }}
-              whileInView={{ y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1], delay: 0.3 }}
-            >
-              GIGI
-            </motion.span>
+          <h2 className="text-3xl md:text-5xl font-black text-charcoal tracking-tighter mt-2">
+            <span className="inline-block overflow-hidden">
+              <motion.span
+                className="inline-block"
+                initial={{ y: "100%" }}
+                whileInView={{ y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1], delay: 0.2 }}
+              >
+                EXPERIENCE {" "}
+              </motion.span>
+            </span>
+            <span className="inline-block overflow-hidden">
+              <motion.span
+                className="text-primary inline-block"
+                initial={{ y: "100%" }}
+                whileInView={{ y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1], delay: 0.3 }}
+              >
+                {""} EVARA
+              </motion.span>
+            </span>
           </h2>
           <motion.p
             className="text-sm text-charcoal/60 font-mono mt-2 max-w-xl mx-auto"
@@ -106,7 +114,7 @@ export function ActivationsSection() {
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
           >
-            From tasting events to corporate partnerships, bring GiGi into your world.
+            Upgrade your guest experience with our premium glass water bottles.
           </motion.p>
         </motion.div>
 
@@ -149,10 +157,11 @@ export function ActivationsSection() {
                   {activation.description}
                 </p>
 
-                <motion.button
+                <motion.a
                   className="flex items-center gap-2 text-primary group-hover:text-charcoal font-bold text-xs tracking-wide transition-colors duration-300"
                   whileHover={{ x: 4 }}
                   transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                  href={activation.link}
                 >
                   {activation.cta}
                   <motion.svg
@@ -166,7 +175,7 @@ export function ActivationsSection() {
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </motion.svg>
-                </motion.button>
+                </motion.a>
               </div>
             </motion.div>
           ))}

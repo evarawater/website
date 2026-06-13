@@ -62,26 +62,17 @@ export function SocialSection() {
           >
             FOLLOW THE ENERGY
           </motion.span>
-          <h2 className="text-3xl md:text-5xl font-black text-white tracking-tighter mt-2 overflow-hidden">
-            <motion.span
-              className="inline-block"
-              initial={{ y: 100 }}
+          <div className="overflow-hidden">
+            <motion.h2
+              className="text-3xl md:text-5xl font-black text-white tracking-tighter mt-2"
+              initial={{ y: "100%" }}
               whileInView={{ y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1], delay: 0.2 }}
             >
-              @GIGIENERGY
-            </motion.span>
-            <motion.span
-              className="text-primary inline-block"
-              initial={{ y: 100 }}
-              whileInView={{ y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1], delay: 0.3 }}
-            >
-              .IN
-            </motion.span>
-          </h2>
+              @GIGIENERGY<span className="text-primary">.IN</span>
+            </motion.h2>
+          </div>
         </motion.div>
 
         <motion.div

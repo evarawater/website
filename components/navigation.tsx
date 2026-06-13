@@ -6,39 +6,6 @@ import Link from "next/link"
 import { useLenis } from "lenis/react"
 import { Menu, X } from "lucide-react"
 
-const linkVariants = {
-  hidden: { opacity: 0, y: -10 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: i * 0.1,
-      duration: 0.4,
-      ease: [0.25, 0.4, 0.25, 1],
-    },
-  }),
-}
-
-const mobileMenuVariants = {
-  hidden: { opacity: 0, height: 0 },
-  visible: {
-    opacity: 1,
-    height: "auto",
-    transition: {
-      duration: 0.3,
-      ease: [0.25, 0.4, 0.25, 1],
-    },
-  },
-  exit: {
-    opacity: 0,
-    height: 0,
-    transition: {
-      duration: 0.2,
-      ease: [0.25, 0.4, 0.25, 1],
-    },
-  },
-}
-
 export function Navigation() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -62,10 +29,11 @@ export function Navigation() {
 
   const navLinks = [
     { label: "Home", href: "#hero" },
-    { label: "Flavours", href: "#flavours" },
-    { label: "Creators", href: "#creators" },
-    { label: "Distributors", href: "#distributors" },
-    { label: "Careers", href: "#careers" },
+    { label: "Drink Evara", href: "#flavours" },
+    { label: "Order", href: "#distributors" },
+    { label: "What’s Inside", href: "#formula" },
+    { label: "Made for", href: "#creators" },
+    { label: "Contact Us", href: "#careers" },
   ]
 
   return (
@@ -80,13 +48,13 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <motion.span
-            className="text-2xl font-black tracking-tighter"
+            className="text-2xl leading-none font-black tracking-tighter"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
           >
-            <span className={scrolled ? "text-white" : "text-charcoal"}>Gi</span>
+            <span className={scrolled ? "text-white" : "text-charcoal"}>EVARA</span>
             <motion.span
-              className="text-primary"
+              className="block text-primary"
               animate={{
                 textShadow: scrolled
                   ? ["0 0 10px rgba(40,172,183,0.5)", "0 0 20px rgba(40,172,183,0.8)", "0 0 10px rgba(40,172,183,0.5)"]
@@ -94,7 +62,7 @@ export function Navigation() {
               }}
               transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
             >
-              Gi
+              Water
             </motion.span>
           </motion.span>
         </Link>
