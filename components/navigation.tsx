@@ -41,9 +41,8 @@ export function Navigation() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 100, damping: 20 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? "bg-charcoal/95 backdrop-blur-md border-b border-white/10" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "bg-charcoal/95 backdrop-blur-md border-b border-white/10" : "bg-transparent"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
@@ -72,9 +71,8 @@ export function Navigation() {
             <motion.button
               key={item.label}
               onClick={() => scrollToSection(item.href)}
-              className={`text-sm font-medium tracking-wide transition-colors relative ${
-                scrolled ? "text-white/80 hover:text-primary" : "text-charcoal/80 hover:text-charcoal"
-              }`}
+              className={`text-sm font-medium tracking-wide transition-colors relative ${scrolled ? "text-white/80 hover:text-primary" : "text-charcoal/80 hover:text-charcoal"
+                }`}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1, duration: 0.4, ease: [0.25, 0.4, 0.25, 1] }}
@@ -92,7 +90,8 @@ export function Navigation() {
           ))}
         </div>
 
-        <motion.button
+        <motion.a
+          href="#careers"
           className="hidden md:block bg-primary text-primary-foreground px-6 py-2.5 rounded-full font-bold text-sm tracking-wide relative overflow-hidden"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -114,8 +113,8 @@ export function Navigation() {
             animate={{ x: ["-100%", "200%"] }}
             transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, repeatDelay: 3 }}
           />
-          <span className="relative z-10">Get 25% Off</span>
-        </motion.button>
+          <span className="relative z-10">Join Us</span>
+        </motion.a>
 
         <motion.button
           className="md:hidden p-2"
